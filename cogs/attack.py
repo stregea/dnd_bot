@@ -20,8 +20,8 @@ from lib.settings import (
 )
 
 # Type aliases for creature data structures
-type CreatureDict = dict[str, Any]
-type ActionDict = dict[str, Any]
+CreatureDict = dict[str, Any]
+ActionDict = dict[str, Any]
 
 # Maximum number of attack results to display in embed (prevents message overflow)
 DISPLAY_LIMIT: int = 10
