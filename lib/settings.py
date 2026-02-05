@@ -16,7 +16,7 @@ from lib.json_reader import read
 load_dotenv(dotenv_path="config/.env")
 
 # Type alias for configuration dictionaries
-type ConfigDict = dict[str, Any]
+ConfigDict = dict[str, Any]
 
 # Load configuration files
 CONFIG: ConfigDict = read("config/config.json")
