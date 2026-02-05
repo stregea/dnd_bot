@@ -81,15 +81,48 @@ The startup scripts will automatically:
 
 ## ⚙️ Configuration
 
-### Discord Token
+### Environment Variables Setup
 
-Edit `config/config.json` and add your Discord bot token:
+The D&D Roller bot uses environment variables to securely manage the Discord bot token. This prevents accidental exposure of sensitive credentials in version control.
+
+#### Step 1: Create a `.env` File
+
+Copy the `.env.example` file and rename it to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+#### Step 2: Add Your Discord Token
+
+Edit the `.env` file in the `config/` directory and replace the placeholder with your actual bot token:
+
+```
+DISCORD_TOKEN=your_actual_discord_bot_token_here
+```
+
+#### Step 3: Install Dependencies
+
+Make sure all dependencies are installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Getting Your Discord Token
+
+1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click "New Application" and give it a name (e.g., "DnD Roller")
+3. Go to the "Bot" section and click "Add Bot"
+4. Under the TOKEN section, click "Copy"
+5. Paste it into your `config/.env` file as `DISCORD_TOKEN=<your_token>`
+
+### Other Configuration
+
+Edit `config/config.json` for command settings:
 
 ```json
 {
-  "api_tokens": {
-    "discord": "YOUR_BOT_TOKEN_HERE"
-  },
   "commands": {
     "prefix": "!",
     "roll": "roll"
@@ -102,7 +135,6 @@ Edit `config/config.json` and add your Discord bot token:
 }
 ```
 
-> ⚠️ **Security Warning:** Never share your bot token or commit it to version control!
 
 ---
 
@@ -211,29 +243,27 @@ Define creatures in `config/creatures.json`:
 
 ```
 DnD/
-├── dnd_roller.py          # Main bot entry point
-├── start.sh               # macOS/Linux startup script
-├── start.bat              # Windows startup script
-├── requirements.txt       # Python dependencies
-├── README.md              # This file
+├── dnd_roller.py               # Main bot entry point
+├── requirements.txt            # Python dependencies
+├── README.md                   # This file
+├── .gitignore                  # Git ignore rules
+├── start.sh                    # macOS/Linux startup script
+├── start.bat                   # Windows startup script
 ├── cogs/
-│   └── attack.py          # Attack command cog
+│   └── attack.py               # Attack command cog
 ├── config/
-│   ├── config.json        # Bot configuration
-│   └── creatures.json     # Creature definitions
+│   ├── .env.example            # Environment variables template (copy to .env)
+│   ├── config.json             # Bot configuration
+│   └── creatures.json          # Creature definitions
 └── lib/
-    ├── json_reader.py     # JSON file utilities
-    ├── roll.py            # Dice rolling functions
-    └── settings.py        # Configuration loader
+    ├── json_reader.py          # JSON file utilities
+    ├── roll.py                 # Dice rolling functions
+    └── settings.py             # Configuration loader & .env file reader
 ```
 
----
+**Key Files:**
+- **`.env.example`** - Template for environment variables (copy to `.env` and fill in your Discord token).
+- **`.env`** - Contains your Discord bot token (created by user, not included in repo).
+- **`config.json`** - Bot command settings and prefixes.
+- **`creatures.json`** - Creature definitions with attacks and damage rolls.
 
-
-## 📄 License
-
-This project is open source. Feel free to modify and distribute.
-
----
-
-**Happy rolling! 🎲**
