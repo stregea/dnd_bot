@@ -71,7 +71,7 @@ class AttackCog(commands.Cog):
         num_creatures: int,
         target_ac: int,
         attack_type: AttackType = "standard",
-        action_name: str | None = None,
+        action_name: str = None,
     ) -> None:
         """
         Roll attacks for multiple creatures against a target.
