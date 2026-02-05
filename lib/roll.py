@@ -9,7 +9,7 @@ from random import randint
 from typing import Literal
 
 # Type alias for attack roll types (standard, advantage, or disadvantage)
-type AttackType = Literal["standard", "advantage", "disadvantage"]
+AttackType = Literal["standard", "advantage", "disadvantage"]
 
 # Critical hit-and-miss thresholds for d20 rolls
 CRITICAL_HIT: int = 20
