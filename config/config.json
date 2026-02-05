@@ -1,0 +1,11 @@
+{
+  "commands": {
+    "prefix": "!",
+    "roll": "roll"
+  },
+  "attacks" : {
+    "standard" : "standard",
+    "advantage" : "advantage",
+    "disadvantage" : "disadvantage"
+  }
+}

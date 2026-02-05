@@ -1,0 +1,92 @@
+# Environment Variables and Secrets
+config/.env
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.project
+.pydevproject
+.settings/
+*.iml
+.vscode/settings.json
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+*.pot
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Temporary Files
+*.tmp
+*.bak
+temp/
+tmp/
+
+# Node modules (if using any web tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Discord Bot Token and Secrets
+discord_token.txt
+token.txt
+secrets.json
+config/.env

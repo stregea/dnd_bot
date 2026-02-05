@@ -1,0 +1,15 @@
+{
+  "wolf": {
+    "default_action": "bite",
+    "actions": {
+      "bite": {
+        "attack_bonus": 4,
+        "damage": {
+          "count": 2,
+          "sides": 4,
+          "bonus": 2
+        }
+      }
+    }
+  }
+}

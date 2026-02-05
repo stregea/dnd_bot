@@ -1,0 +1,12 @@
+# =============================================================================
+# DnD Roller Bot - Python Dependencies
+# =============================================================================
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# Discord API wrapper for Python
+discord.py>=2.3.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
